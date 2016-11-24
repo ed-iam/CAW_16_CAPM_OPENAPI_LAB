@@ -1,61 +1,18 @@
-# BusyTimes
-A set of charts which displays the overall volume of an interface, device, or group for the specified metric family and metric. 
-The data is bucketized and displayed in aggregate (sum) based on the:
-	* Hour of Day (0-24)
-	* Day of Week (Sunday - Saturday)
-	* Day of Month (1-31)
+# CAPM Weather-Map
+
 
 ![](./screenShot.jpg?raw=true "Example Screenshot")
 
 ##Installation Instructions:
 
 1. Copy app to user app directory on CAPC (/opt/CA/PerformanceCenter/PC/webapps/pc/apps/user)
-2. Modify/Add a view to a dashboard (for group context) or a context page (interface, device)
+2. Modify/Add a view to a dashboard (for group context)
 3. Add browser view(s) with height of 700
 4. Add URL to app location with key parameters defined (see below)
 
 ###CAPC Browser view sample URL:
 
-This example would be placed on an interface context page to view the bucketized Errors metric to understand when errors are most frequently occuring for the given interface:
-
-/pc/apps/user/BusyTime/index.html?interfaceID={ItemIdDA}&startTime={TimeStartUTC}&endTime={TimeEndUTC}&metricFamily=portmfs&metric=im_Errors
-
-###Key URL parameters:
-
-<table>
-    <tr>
-        <td>Parameter</td>
-        <td>Description</td>
-    </tr>
-    <tr>
-    	<td>interfaceID</td>
-    	<td>The ID of the interface for the given context page</td>
-    </tr>
-    <tr>
-    	<td>deviceID</td>
-    	<td>The ID of the device for the given context page</td>
-    </tr>
-    <tr>
-    	<td>groupID</td>
-    	<td>The ID of the group for the given Dashboard</td>
-    </tr>
-    <tr>
-    	<td>metricFamily</td>
-    	<td>The OpenAPI ID for the targetted Metric Family (see QueryBuilder for MF names)</td>
-    </tr>
-        <tr>
-    	<td>metric</td>
-    	<td>The OpenAPI name for the desired metric (see QueryBuilder for metric names</td>
-    </tr>
-        <tr>
-    	<td>startTime</td>
-    	<td>The start time (UNIX Epoch time) from the CAPC Time selector</td>
-    </tr>
-        <tr>
-    	<td>endTime</td>
-    	<td>The end time (UNIX Epoch time) from the CAPC Time selector</td>
-    </tr>
-</table>
+See lab document for implementation details
 
 
 ===================================================================================
